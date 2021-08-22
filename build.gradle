@@ -1,0 +1,23 @@
+plugins {
+    id 'java-library'
+}
+
+group 'com.teamnoctis'
+version 'indev'
+
+repositories {
+    mavenCentral()
+    maven {
+        url 'https://oss.sonatype.org/content/repositories/snapshots/'
+    }
+}
+
+dependencies {
+    implementation 'org.javacord:javacord:3.4.0-SNAPSHOT'
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.2'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.2'
+}
+
+test {
+    useJUnitPlatform()
+}
